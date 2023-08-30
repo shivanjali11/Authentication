@@ -1,0 +1,152 @@
+<!-- here after login add form of child details for authority and user  -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Missing child identification</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        font-family: "Barlow", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav ul li {
+        margin-left: 10px;
+      }
+
+      .nav ul li a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .logo {
+        display: flex;
+        margin-top: 10px;
+        margin-right: auto;
+      }
+
+      .logo a {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(22, 154, 99);
+        margin-top: 20px;
+      }
+
+      .nav-li {
+        display: flex;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .nav-li a {
+        color: black;
+      }
+
+      .nav-li li button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #0d65d1;
+        color: #ffffff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .nav-li li button:hover {
+        background-color: #45a049;
+      }
+
+      @keyframes logoAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .logo img {
+        animation-name: logoAnimation;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .nav-li li {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .nav-li li.fade-in {
+        opacity: 1;
+      }
+
+      .sent {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(43, 121, 43);
+      }
+      .sent h1 {
+        font-size: 50px;
+        margin-bottom: 8%;
+        font-family: "Satisfy", cursive;
+      }
+      .sent h3 {
+        font-size: 30px;
+        font-family: "Satisfy", cursive;
+      }
+      .body {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <nav>
+        <ul>
+          <div class="logo">
+            <li><img src="{% static 'app1/images/3.jpeg' %}" alt="" /></li>
+            <li><a href="">Missing Child Identification</a></li>
+          </div>
+          <div class="nav-li">
+            <li class="fade-in">
+              <button><a href="">Home</a></button>
+            </li>
+            <li class="fade-in">
+              <button><a href="{% url 'form' %}">Fill Form</a></button>
+            </li>
+            <li class="fade-in">
+              <button><a href=""> Search</a></button>
+            </li>
+            <li class="fade-in">
+              <button><a href="{% url 'logout' %}">Logout</a></button>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="body">
+      <h1>Authority Home</h1>
+    </div>
+
+    <script src="auth.js" async defer></script>
+  </body>
+</html>

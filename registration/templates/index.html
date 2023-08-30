@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Missing child identification</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    {% load static %}
+    <style>
+      * {
+        font-family: "Barlow", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image: url("static/app1/images/3.jpg");
+        object-fit: fill;
+        animation-name: backgroundAnimation;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes backgroundAnimation {
+        0% {
+          background-position: right top;
+        }
+        50% {
+          background-position: left top;
+        }
+        100% {
+          background-position: right top;
+        }
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav ul li {
+        margin-left: 10px;
+      }
+
+      .nav ul li a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .logo {
+        display: flex;
+        margin-top: 10px;
+        margin-right: auto;
+      }
+
+      .logo a {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(22, 154, 99);
+        margin-top: 20px;
+      }
+
+      .nav-li {
+        display: flex;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .nav-li a {
+        color: black;
+      }
+
+      .nav-li li button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #0d65d1;
+        color: #ffffff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .nav-li li button:hover {
+        background-color: #45a049;
+      }
+
+      @keyframes logoAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .logo img {
+        animation-name: logoAnimation;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .nav-li li {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .nav-li li.fade-in {
+        opacity: 1;
+      }
+
+      .sent {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(43, 121, 43);
+      }
+
+      .sent h1 {
+        font-size: 50px;
+        margin-bottom: 8%;
+        font-family: "Satisfy", cursive;
+      }
+
+      .sent h3 {
+        font-size: 30px;
+        font-family: "Satisfy", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <nav>
+          <ul>
+            <div class="logo">
+              <li><img src="{% static 'app1/images/3.jpeg' %}" alt="" /></li>
+              <li><a href="">Missing Child Identification</a></li>
+            </div>
+            <div class="nav-li">
+              <li class="fade-in">
+                <button><a href="">Home</a></button>
+              </li>
+              <li class="fade-in">
+                <button><a href="signup.html">Authority</a></button>
+              </li>
+              <li class="fade-in">
+                <button><a href="signup2.html">User</a></button>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+      <div class="sent">
+        <h1>Welcome</h1>
+        <h3>“Don’t grieve. Anything you lose comes round in another form.”</h3>
+      </div>
+    </div>
+
+    <script src="{% static 'app1/auth.js' %}" async defer></script>
+  </body>
+</html>

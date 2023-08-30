@@ -1,0 +1,118 @@
+* {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url("{% static 'app1/images/3.jpg' %}");
+    background-repeat: no-repeat;
+    background-position: right top;
+    animation-name: backgroundAnimation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% { background-position: right top; }
+    50% { background-position: left top; }
+    100% { background-position: right top; }
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+  }
+  
+  .nav ul li {
+    margin-left: 10px;
+  }
+  
+  .nav ul li a {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .logo {
+    display: flex;
+    margin-top: 10px;
+    margin-right: auto;
+  }
+  
+  .logo a {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(22, 154, 99);
+    margin-top: 20px;
+  }
+  
+  .nav-li {
+    display: flex;  
+    margin-top: 20px;
+    margin-right: 10px;  
+  }
+  
+  .nav-li a {
+    color: black;
+  }
+  
+  .nav-li li button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0d65d1;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .nav-li li button:hover {
+    background-color: #45a049;
+  }
+  
+  @keyframes logoAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .logo img {
+    animation-name: logoAnimation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .nav-li li {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .nav-li li.fade-in {
+    opacity: 1;
+  }
+  
+  .sent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(43, 121, 43);
+    
+}
+.sent h1{
+    font-size: 50px;
+    margin-bottom:8%;
+    font-family: 'Satisfy', cursive;
+}
+.sent h3{
+    font-size: 30px;
+    font-family: 'Satisfy', cursive;
+}
+  
